@@ -2,18 +2,18 @@
   "$schema": "https://raw.githubusercontent.com/fastpresspages/launchgrade/v0.3.0/schema/report.schema.json",
   "tool": "launchgrade",
   "version": "0.3.0",
-  "generatedAt": "2026-10-24T15:40:24.225Z",
+  "generatedAt": "2026-10-24T15:42:50.072Z",
   "url": "https://fastpresspages.github.io/repograde/",
   "requestedUrl": "https://fastpresspages.github.io/repograde/",
   "httpStatus": 200,
-  "responseMs": 341,
-  "htmlBytes": 16075,
+  "responseMs": 295,
+  "htmlBytes": 15997,
   "grade": "A+",
-  "score": 96,
+  "score": 98,
   "label": "Launch-ready",
   "counts": {
-    "pass": 44,
-    "warn": 4,
+    "pass": 46,
+    "warn": 2,
     "fail": 0,
     "info": 6,
     "error": 0,
@@ -37,11 +37,11 @@
       "key": "trust",
       "label": "Trust",
       "short": "Trust",
-      "score": 94,
+      "score": 100,
       "weight": 15,
       "counts": {
-        "pass": 4,
-        "warn": 1,
+        "pass": 5,
+        "warn": 0,
         "fail": 0
       }
     },
@@ -97,39 +97,23 @@
       "key": "agent",
       "label": "AI-agent readiness",
       "short": "Agents",
-      "score": 86,
+      "score": 100,
       "weight": 10,
       "counts": {
-        "pass": 5,
-        "warn": 1,
+        "pass": 6,
+        "warn": 0,
         "fail": 0
       }
     }
   ],
   "topFixes": [
     {
-      "id": "agent.llms-txt",
-      "status": "warn",
-      "title": "Publishes llms.txt",
-      "detail": "llms.txt exists but does not look like the llms.txt format.",
-      "fix": "Start with “# Your product”, one-line description, then links to key pages.",
-      "impact": 1.36
-    },
-    {
       "id": "seo.description",
       "status": "warn",
       "title": "Has a meta description",
-      "detail": "Description is 200 characters.",
+      "detail": "Description is 170 characters.",
       "fix": "Aim for 50–160 characters with the outcome and audience.",
       "impact": 1.32
-    },
-    {
-      "id": "trust.copyright",
-      "status": "warn",
-      "title": "Shows a current footer",
-      "detail": "No copyright/footer found.",
-      "fix": "Add a footer with company name, year and legal links.",
-      "impact": 0.94
     },
     {
       "id": "tech.analytics",
@@ -253,10 +237,10 @@
       "id": "trust.copyright",
       "category": "trust",
       "title": "Shows a current footer",
-      "status": "warn",
+      "status": "pass",
       "weight": 1,
-      "detail": "No copyright/footer found.",
-      "fix": "Add a footer with company name, year and legal links."
+      "detail": "Footer copyright is current (2026).",
+      "fix": ""
     },
     {
       "id": "tech.https",
@@ -282,7 +266,7 @@
       "title": "Loads the HTML quickly",
       "status": "pass",
       "weight": 2,
-      "detail": "HTML arrived in 341 ms.",
+      "detail": "HTML arrived in 295 ms.",
       "fix": ""
     },
     {
@@ -390,7 +374,7 @@
       "title": "Has a meta description",
       "status": "warn",
       "weight": 3,
-      "detail": "Description is 200 characters.",
+      "detail": "Description is 170 characters.",
       "fix": "Aim for 50–160 characters with the outcome and audience."
     },
     {
@@ -462,7 +446,7 @@
       "title": "Has readable copy in the HTML",
       "status": "pass",
       "weight": 1,
-      "detail": "31.9% of the HTML is readable text.",
+      "detail": "32.1% of the HTML is readable text.",
       "fix": ""
     },
     {
@@ -550,10 +534,10 @@
       "id": "agent.llms-txt",
       "category": "agent",
       "title": "Publishes llms.txt",
-      "status": "warn",
+      "status": "pass",
       "weight": 3,
-      "detail": "llms.txt exists but does not look like the llms.txt format.",
-      "fix": "Start with “# Your product”, one-line description, then links to key pages."
+      "detail": "llms.txt is published with a title and content.",
+      "fix": ""
     },
     {
       "id": "agent.llms-full",
@@ -624,7 +608,7 @@
       "title": "Works without JavaScript",
       "status": "pass",
       "weight": 2,
-      "detail": "5131 characters of copy are in the HTML.",
+      "detail": "5130 characters of copy are in the HTML.",
       "fix": ""
     }
   ],

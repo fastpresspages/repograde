@@ -1,7 +1,7 @@
 {
   "tool": "repograde",
   "version": "0.1.0",
-  "generatedAt": "2026-10-24T15:40:23.212Z",
+  "generatedAt": "2026-10-24T15:41:58.458Z",
   "repo": {
     "owner": "fastpresspages",
     "name": "repograde",
@@ -9,15 +9,15 @@
     "branch": "main",
     "description": "Grade any public GitHub repo before you announce it - 33 checks, 6 categories, zero dependencies. CLI + GitHub Action + MCP server."
   },
-  "grade": "B+",
-  "score": 84,
-  "label": "Almost there",
+  "grade": "A+",
+  "score": 99,
+  "label": "Announce-ready",
   "counts": {
-    "pass": 25,
-    "warn": 2,
-    "fail": 2,
+    "pass": 30,
+    "warn": 1,
+    "fail": 0,
     "error": 0,
-    "skip": 2,
+    "skip": 0,
     "info": 0
   },
   "categories": [
@@ -25,7 +25,7 @@
       "key": "docs",
       "label": "Documentation",
       "weight": 20,
-      "score": 80,
+      "score": 100,
       "checks": 5,
       "scored": 5
     },
@@ -57,44 +57,20 @@
       "key": "release",
       "label": "Release hygiene",
       "weight": 10,
-      "score": 0,
+      "score": 100,
       "checks": 3,
-      "scored": 1
+      "scored": 3
     },
     {
       "key": "agent",
       "label": "Agent-readiness",
       "weight": 15,
-      "score": 90,
+      "score": 100,
       "checks": 4,
       "scored": 4
     }
   ],
   "topFixes": [
-    {
-      "id": "rel.releases",
-      "title": "At least one GitHub release",
-      "category": "release",
-      "status": "fail",
-      "detail": "No releases - nobody can point at a stable version",
-      "impact": 10
-    },
-    {
-      "id": "docs.changelog",
-      "title": "Changelog with version entries",
-      "category": "docs",
-      "status": "fail",
-      "detail": "No CHANGELOG.md",
-      "impact": 4
-    },
-    {
-      "id": "agent.skills",
-      "title": "Installable agent skill",
-      "category": "agent",
-      "status": "warn",
-      "detail": "No skills/*/SKILL.md",
-      "impact": 1.5
-    },
     {
       "id": "eng.lockfile",
       "title": "Dependencies pinned",
@@ -142,8 +118,8 @@
       "title": "Changelog with version entries",
       "category": "docs",
       "weight": 4,
-      "status": "fail",
-      "detail": "No CHANGELOG.md"
+      "status": "pass",
+      "detail": "Versioned changelog entries"
     },
     {
       "id": "comm.license",
@@ -302,24 +278,24 @@
       "title": "At least one GitHub release",
       "category": "release",
       "weight": 4,
-      "status": "fail",
-      "detail": "No releases - nobody can point at a stable version"
+      "status": "pass",
+      "detail": "1 release(s)"
     },
     {
       "id": "rel.notes",
       "title": "Release notes readable",
       "category": "release",
       "weight": 3,
-      "status": "skip",
-      "detail": "n/a for this repo"
+      "status": "pass",
+      "detail": "Notes explain what changed"
     },
     {
       "id": "rel.version-match",
       "title": "Tag matches package.json",
       "category": "release",
       "weight": 3,
-      "status": "skip",
-      "detail": "n/a for this repo"
+      "status": "pass",
+      "detail": "0.1.0 == tag v0.1.0"
     },
     {
       "id": "agent.instructions",
@@ -334,8 +310,8 @@
       "title": "Installable agent skill",
       "category": "agent",
       "weight": 3,
-      "status": "warn",
-      "detail": "No skills/*/SKILL.md"
+      "status": "pass",
+      "detail": "1 SKILL.md"
     },
     {
       "id": "agent.mcp",

@@ -1,34 +1,28 @@
 # LaunchGrade: fastpresspages.github.io
 
-> **A+ · 96/100 — Launch-ready**
+> **A+ · 98/100 — Launch-ready**
 >
 > `https://fastpresspages.github.io/repograde/`  
-> Scanned Sat, 24 Oct 2026 15:40:24 GMT · 341 ms · 16 KB HTML
+> Scanned Sat, 24 Oct 2026 15:42:50 GMT · 295 ms · 16 KB HTML
 
-**44 pass · 4 warn · 0 fail · 6 info**
+**46 pass · 2 warn · 0 fail · 6 info**
 
 | Category | Score | Weight | Status |
 | --- | ---: | ---: | --- |
 | Conversion | 100/100 | 25% | 7✓ 0! 0× |
-| Trust | 94/100 | 15% | 4✓ 1! 0× |
+| Trust | 100/100 | 15% | 5✓ 0! 0× |
 | Technical | 98/100 | 20% | 11✓ 1! 0× |
 | SEO | 91/100 | 15% | 8✓ 1! 0× |
 | Social sharing | 100/100 | 10% | 3✓ 0! 0× |
 | Accessibility | 100/100 | 5% | 6✓ 0! 0× |
-| AI-agent readiness | 86/100 | 10% | 5✓ 1! 0× |
+| AI-agent readiness | 100/100 | 10% | 6✓ 0! 0× |
 
 ## Fix these first
 
-1. ⚠️ **Publishes llms.txt** (AI-agent readiness)
-   - llms.txt exists but does not look like the llms.txt format.
-   - **Fix:** Start with “# Your product”, one-line description, then links to key pages.
-2. ⚠️ **Has a meta description** (SEO)
-   - Description is 200 characters.
+1. ⚠️ **Has a meta description** (SEO)
+   - Description is 170 characters.
    - **Fix:** Aim for 50–160 characters with the outcome and audience.
-3. ⚠️ **Shows a current footer** (Trust)
-   - No copyright/footer found.
-   - **Fix:** Add a footer with company name, year and legal links.
-4. ⚠️ **Measures visits** (Technical)
+2. ⚠️ **Measures visits** (Technical)
    - No analytics detected.
    - **Fix:** Add privacy-friendly analytics (Plausible, Umami, or a simple counter) before you announce.
 
@@ -52,14 +46,13 @@
 - ✅ **Explains who is behind the page** — About/team link found (“FastPress Labs”).
 - ✅ **Links a real social profile** — Social profile linked (github.com).
 - ℹ️ **Publishes a security contact** — No /.well-known/security.txt (optional for launch pages).
-- ⚠️ **Shows a current footer** — No copyright/footer found.
-  - *Fix:* Add a footer with company name, year and legal links.
+- ✅ **Shows a current footer** — Footer copyright is current (2026).
 
 ### Technical
 
 - ✅ **Serves over HTTPS** — Final URL is HTTPS.
 - ✅ **Returns a healthy status** — Page returned HTTP 200.
-- ✅ **Loads the HTML quickly** — HTML arrived in 341 ms.
+- ✅ **Loads the HTML quickly** — HTML arrived in 295 ms.
 - ✅ **Compresses the response** — Content-Encoding: gzip.
 - ✅ **Sets cache headers** — Cache-Control: max-age=600.
 - ✅ **Is mobile-ready** — Responsive viewport is configured.
@@ -75,7 +68,7 @@
 ### SEO
 
 - ✅ **Has a well-sized title** — Title is 50 characters.
-- ⚠️ **Has a meta description** — Description is 200 characters.
+- ⚠️ **Has a meta description** — Description is 170 characters.
   - *Fix:* Aim for 50–160 characters with the outcome and audience.
 - ✅ **Has exactly one H1** — One H1: “Grade your repo before the internet does.”.
 - ✅ **Uses a sane heading outline** — 12 headings, 5 H2 sections.
@@ -84,7 +77,7 @@
 - ✅ **Publishes robots.txt** — robots.txt is published.
 - ✅ **Adds structured data** — JSON-LD found: Organization, WebSite, SoftwareApplication, FAQPage.
 - ✅ **Links its own pages** — 14 internal links found.
-- ✅ **Has readable copy in the HTML** — 31.9% of the HTML is readable text.
+- ✅ **Has readable copy in the HTML** — 32.1% of the HTML is readable text.
 
 ### Social sharing
 
@@ -103,8 +96,7 @@
 
 ### AI-agent readiness
 
-- ⚠️ **Publishes llms.txt** — llms.txt exists but does not look like the llms.txt format.
-  - *Fix:* Start with “# Your product”, one-line description, then links to key pages.
+- ✅ **Publishes llms.txt** — llms.txt is published with a title and content.
 - ℹ️ **Offers a full-context file** — No llms-full.txt (optional).
 - ✅ **Lets AI crawlers in** — All 6 major AI/search crawlers are allowed.
 - ✅ **Speaks to coding agents** — AGENTS.md is published.
@@ -112,7 +104,7 @@
 - ℹ️ **Exposes a machine-readable API** — No MCP/OpenAPI descriptor (only needed if agents can act on your product).
 - ✅ **Answers buying questions** — FAQPage structured data is present.
 - ✅ **Uses semantic HTML** — Semantic main/article/nav structure found.
-- ✅ **Works without JavaScript** — 5131 characters of copy are in the HTML.
+- ✅ **Works without JavaScript** — 5130 characters of copy are in the HTML.
 
 </details>
 

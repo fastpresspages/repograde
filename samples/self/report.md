@@ -1,21 +1,18 @@
 # RepoGrade — fastpresspages/repograde
-> **B+ · 84/100 · Almost there** — scanned 2026-10-24 with RepoGrade v0.1.0
+> **A+ · 99/100 · Announce-ready** — scanned 2026-10-24 with RepoGrade v0.1.0
 
-25 pass · 2 warn · 2 fail · 2 skipped · 0 info
+30 pass · 1 warn · 0 fail · 0 skipped · 0 info
 
 | Category | Score |
 | --- | --- |
-| Documentation | 80 |
+| Documentation | 100 |
 | Community | 100 |
 | Engineering | 96 |
 | Discoverability | 100 |
-| Release hygiene | 0 |
-| Agent-readiness | 90 |
+| Release hygiene | 100 |
+| Agent-readiness | 100 |
 
 ## Fix these first
-- **At least one GitHub release** (fail · rel.releases) — No releases - nobody can point at a stable version
-- **Changelog with version entries** (fail · docs.changelog) — No CHANGELOG.md
-- **Installable agent skill** (warn · agent.skills) — No skills/*/SKILL.md
 - **Dependencies pinned** (warn · eng.lockfile) — No lockfile: builds for this package.json will not be reproducible
 
 <details>
@@ -25,7 +22,7 @@
 - ✅ `docs.readme-quality` — README explains the repo — 6233 characters of guidance
 - ✅ `docs.install` — Install command — Install guidance detected
 - ✅ `docs.usage` — Usage example — Usage section present
-- ❌ `docs.changelog` — Changelog with version entries — No CHANGELOG.md
+- ✅ `docs.changelog` — Changelog with version entries — Versioned changelog entries
 - ✅ `comm.license` — License declared — Apache-2.0
 - ✅ `comm.permissive` — Permissive license family — Apache-2.0
 - ✅ `comm.contributing` — CONTRIBUTING guide — Found CONTRIBUTING.md
@@ -45,11 +42,11 @@
 - ✅ `disc.topics` — At least 3 topics — 9 topics
 - ✅ `disc.homepage` — Homepage link set — https://fastpresspages.github.io/repograde/
 - ✅ `disc.active` — Recent activity (&lt;= 90 days) — last push 0 day(s) ago
-- ❌ `rel.releases` — At least one GitHub release — No releases - nobody can point at a stable version
-- ⏭️ `rel.notes` — Release notes readable — n/a for this repo
-- ⏭️ `rel.version-match` — Tag matches package.json — n/a for this repo
+- ✅ `rel.releases` — At least one GitHub release — 1 release(s)
+- ✅ `rel.notes` — Release notes readable — Notes explain what changed
+- ✅ `rel.version-match` — Tag matches package.json — 0.1.0 == tag v0.1.0
 - ✅ `agent.instructions` — AGENTS.md present — Found AGENTS.md
-- ⚠️ `agent.skills` — Installable agent skill — No skills/*/SKILL.md
+- ✅ `agent.skills` — Installable agent skill — 1 SKILL.md
 - ✅ `agent.mcp` — MCP or manifest released — 2 MCP artifact(s)
 - ✅ `agent.llms` — llms.txt published — Found llms.txt
 
