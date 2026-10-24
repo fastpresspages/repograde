@@ -9,6 +9,7 @@ public GitHub repository — in one command, in ~15 seconds, with zero dependenc
 ![Zero dependencies](https://img.shields.io/badge/runtime%20deps-0-C6FF4A)
 ![Checks](https://img.shields.io/badge/checks-33-A78BFA)
 ![Sample](https://img.shields.io/badge/launchgrade%20repo-A%2B%2096%2F100-3DDC84)
+![Site audit](https://img.shields.io/badge/site%20audited-A%2B%20100%2F100-3DDC84)
 
 Part of [FastPress Labs](https://github.com/fastpresspages) — small, free, open
 source tools for people who ship. Sister project: [LaunchGrade](https://github.com/fastpresspages/launchgrade)
@@ -73,6 +74,9 @@ Fix these first
 Full artifacts for that scan and a lower-grade example live in `samples/`
 (launchgrade → **A+ 96**, fastpress-start → **B 79**, same day, honest numbers).
 Low grades get published too — that is the point.
+
+The RepoGrade site itself is audited by LaunchGrade: **A+ 100/100** at launch
+(24 Oct 2026, samples/repograde-site/, one intentional no-analytics warning).
 
 ## Reports & artifacts
 
