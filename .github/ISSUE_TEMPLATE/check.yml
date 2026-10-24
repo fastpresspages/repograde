@@ -1,0 +1,19 @@
+name: "New check or improvement"
+description: "Propose a guidelines check, or a change to scoring/fix text"
+labels: ["enhancement", "triage"]
+body:
+  - type: input
+    id: case
+    attributes:
+      label: "Example repo that shows the gap"
+      description: "A public repo where this check would warn or fail today"
+      placeholder: "owner/repo"
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: "The check idea"
+      description: "What it would look for, and a fix text someone could act on. If it requires reading private code or network beyond api.github.com, explain how it stays zero-install."
+    validations:
+      required: true

@@ -1,0 +1,54 @@
+{
+  "name": "repograde",
+  "version": "0.1.0",
+  "description": "Grade any public GitHub repo before you announce it - docs, community, engineering, discoverability, release hygiene and agent-readiness in one pass. Zero dependencies.",
+  "type": "module",
+  "bin": {
+    "repograde": "bin/repograde.js",
+    "repograde-mcp": "mcp/server.js"
+  },
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./mcp": "./mcp/server.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "mcp",
+    "skills",
+    "scripts",
+    "action.yml",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "mcp": "node mcp/server.js",
+    "self": "node bin/repograde.js fastpresspages/repograde",
+    "audit:self": "node bin/repograde.js fastpresspages/repograde -o samples/self"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "keywords": [
+    "repository",
+    "audit",
+    "open-source",
+    "cli",
+    "github",
+    "mcp",
+    "ai-agent",
+    "developer-experience",
+    "zero-dependencies"
+  ],
+  "author": "FastPress Labs",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fastpresspages/repograde"
+  },
+  "homepage": "https://fastpresspages.github.io/repograde/",
+  "bugs": {
+    "url": "https://github.com/fastpresspages/repograde/issues"
+  }
+}

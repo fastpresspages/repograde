@@ -1,0 +1,30 @@
+name: "Bug report"
+description: "Something in RepoGrade is wrong or misleading"
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for checking! A scan URL plus the exact check id goes a long way."
+  - type: input
+    id: repo
+    attributes:
+      label: "Repo or scan"
+      description: "owner/repo you graded (public ones only)"
+      placeholder: "fastpresspages/launchgrade"
+    validations:
+      required: true
+  - type: input
+    id: check
+    attributes:
+      label: "Check id"
+      description: "e.g. docs.usage — run `repograde --list` to see all ids"
+      placeholder: "docs.usage"
+    validations:
+      required: false
+  - type: textarea
+    id: what
+    attributes:
+      label: "What went wrong"
+      description: "What you expected vs what happened. Paste terminal output if handy."
+    validations:
+      required: true

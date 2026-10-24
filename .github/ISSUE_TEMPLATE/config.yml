@@ -1,0 +1,8 @@
+# Community health for fastpresspages repos.
+contact_links:
+  - name: Repo review (human audit, free)
+    url: https://fastpresspages.github.io/repograde/#contact
+    about: Drop your repo and get a human reply with the three fixes that matter.
+  - name: FastPress Labs org
+    url: https://github.com/fastpresspages
+    about: Small, free, open-source tools for people who ship.

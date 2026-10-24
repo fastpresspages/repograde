@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RepoGrade — grade your repo before you announce it</title>
+<meta name="description" content="RepoGrade scores any public GitHub repository in ~15 seconds: 33 checks across docs, community, engineering, discoverability, release hygiene and agent-readiness. Free, zero dependencies, open source.">
+<link rel="canonical" href="https://fastpresspages.github.io/repograde/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#08080A">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fastpresspages.github.io/repograde/">
+<meta property="og:title" content="RepoGrade — grade your repo before you announce it">
+<meta property="og:description" content="33 checks across 6 categories on any public GitHub repo. Terminal, JSON, Markdown and HTML reports. Free and open source.">
+<meta property="og:image" content="https://fastpresspages.github.io/repograde/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="RepoGrade banner: grade A+ 96/100 for fastpresspages/launchgrade, 33 checks in six categories">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RepoGrade — grade your repo before you announce it">
+<meta name="twitter:description" content="33 checks across 6 categories on any public GitHub repo. Free, open source, zero dependencies.">
+<meta name="twitter:image" content="https://fastpresspages.github.io/repograde/assets/og.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","@id":"https://fastpresspages.github.io/repograde/#org","name":"FastPress Labs","url":"https://github.com/fastpresspages","email":"meetcode99@gmail.com"},
+{"@type":"WebSite","@id":"https://fastpresspages.github.io/repograde/#site","url":"https://fastpresspages.github.io/repograde/","name":"RepoGrade","publisher":{"@id":"https://fastpresspages.github.io/repograde/#org"}},
+{"@type":"SoftwareApplication","name":"RepoGrade","applicationCategory":"DeveloperApplication","operatingSystem":"Node 18.17+","description":"Open-source CLI that grades public GitHub repositories across docs, community, engineering, discoverability, release hygiene and agent-readiness.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@id":"https://fastpresspages.github.io/repograde/#org"}},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What does RepoGrade check?","acceptedAnswer":{"@type":"Answer","text":"33 checks across six categories: documentation, community, engineering, discoverability, release hygiene and agent-readiness."}},
+{"@type":"Question","name":"How do I run it?","acceptedAnswer":{"@type":"Answer","text":"Run npx -p github:fastpresspages/repograde repograde owner/repo. Zero dependencies; an npm package is planned once publishing is set up."}},
+{"@type":"Question","name":"Is it free?","acceptedAnswer":{"@type":"Answer","text":"Yes. The CLI, GitHub Action, MCP server and reports are free forever under Apache-2.0. Paid human reviews are optional and explained on the FastPress Labs site."}},
+{"@type":"Question","name":"Does it use my code?","acceptedAnswer":{"@type":"Answer","text":"Scans read public GitHub metadata only. Nothing is uploaded anywhere and reports stay on your machine unless you publish them."}}]}
+]}
+</script>
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head" id="top">
+  <nav aria-label="Main" class="wrap">
+    <a class="brand" href="."><span class="mark" aria-hidden="true">RG</span> RepoGrade</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="navmenu">Menu</button>
+    <div id="navmenu" class="menu">
+      <a href="#categories">Checks</a>
+      <a href="#sample">Live example</a>
+      <a href="#install">Install</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://github.com/fastpresspages/repograde">GitHub</a>
+    </div>
+  </nav>
+</header>
+<main id="main">
+<section class="hero wrap">
+  <div class="hero-copy">
+    <p class="kicker">From FastPress Labs — page audited at A+ by our own LaunchGrade</p>
+    <h1>Grade your repo before the internet does.</h1>
+    <p class="lede">LaunchGrade audits your landing page. RepoGrade audits everything
+    behind the link: <strong>33 checks across docs, community, engineering,
+    discoverability, release hygiene and agent-readiness</strong> — on any public
+    GitHub repo, in one command. Zero dependencies. Free forever.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="#install">Run your first grade</a>
+      <a class="btn ghost" href="https://github.com/fastpresspages/repograde">Star / clone on GitHub</a>
+    </div>
+    <p class="tiny">Reads public GitHub metadata only. Never uploads your code. Reports stay local unless you publish them.</p>
+  </div>
+  <figure class="hero-report" aria-label="Live sample scan of fastpresspages/launchgrade">
+    <figcaption>Live sample · actual output, 24 Oct 2026</figcaption>
+    <div class="grade-line"><span class="grade-pill">A+</span><span class="score">96/100</span><span class="grade-label">Announce-ready</span></div>
+    <div class="mini-bars">
+      <div><span>Documentation</span><i style="--w:100%"></i></div>
+      <div><span>Community</span><i style="--w:100%"></i></div>
+      <div><span>Engineering</span><i style="--w:96%"></i></div>
+      <div><span>Discoverability</span><i style="--w:100%"></i></div>
+      <div><span>Release hygiene</span><i style="--w:85%"></i></div>
+      <div><span>Agent-readiness</span><i style="--w:90%"></i></div>
+    </div>
+    <p class="tiny">Sample repo: <a href="samples/launchgrade/report.html">fastpresspages/launchgrade</a> · <a href="samples/fastpress-start/report.html">B 79 for fastpress-start</a> · we publish low grades too.</p>
+  </figure>
+</section>
+
+<section id="categories" class="wrap section">
+  <h2>What it grades</h2>
+  <p>Six categories, weighted like a launch-quality scorecard. Warns cost half credit; passes cost none.</p>
+  <div class="cat-grid">
+    <article><h3>Documentation <small>20%</small></h3><p>README that explains the repo in 15 seconds, plus install command, usage example and a real changelog.</p></article>
+    <article><h3>Community <small>15%</small></h3><p>License (permissive preferred), contributing guide, code of conduct, support channels, issue and PR templates.</p></article>
+    <article><h3>Engineering <small>25%</small></h3><p>Tests that run, CI that runs them, declared toolchain, committed lockfile — and a gentle flag when dependencies pile up.</p></article>
+    <article><h3>Discoverability <small>15%</small></h3><p>Description, at least three topics, homepage link and current activity, so search and social cards actually work.</p></article>
+    <article><h3>Release hygiene <small>10%</small></h3><p>A tagged release, readable notes and a tag that matches package.json — where stability actually lives.</p></article>
+    <article><h3>Agent-readiness <small>15%</small></h3><p>AGENTS.md, an installable skill, an MCP or manifest, llms.txt — the layer humans forget and AI agents read first.</p></article>
+  </div>
+  <a class="tiny" href="#faq">Full list in the CLI: <code>repograde --list</code></a>
+</section>
+
+<section id="install" class="wrap section">
+  <h2>Install once, grade any repo</h2>
+  <div class="term">
+    <div class="term-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="term-title">your terminal</span></div>
+    <pre><code><span class="c-dim">$</span> <span class="c-lime">npx</span> -p github:fastpresspages/repograde repograde fastpresspages/launchgrade
+
+<span class="c-dim">▲ RepoGrade v0.1.0 · fastpresspages/launchgrade</span>
+<span class="c-dim">https://github.com/fastpresspages/launchgrade • branch main</span>
+
+   <span class="c-dim">┌──────────────────────────────────────────────┐</span>
+   <span class="c-dim">│</span>  <span class="c-green">A+</span>  <span class="c-bold"> 96/100</span>   Announce-ready   <span class="c-dim">│</span>
+   <span class="c-dim">└──────────────────────────────────────────────┘</span>
+   <span class="c-dim"> 28 pass · 3 warn · 0 fail</span>
+
+   <span class="c-bold">Documentation</span>     <span class="c-dim">100</span>  <span class="c-dim">████████████████████</span>
+   <span class="c-bold">Community</span>         <span class="c-dim">100</span>  <span class="c-dim">████████████████████</span>
+   <span class="c-bold">Engineering</span>       <span class="c-dim"> 96</span>  <span class="c-dim">███████████████████</span><span class="c-dim">░</span>
+   <span class="c-bold">Discoverability</span>   <span class="c-dim">100</span>  <span class="c-dim">████████████████████</span>
+   <span class="c-bold">Release hygiene</span>   <span class="c-dim"> 85</span>  <span class="c-dim">████████████████░</span><span class="c-dim">░░░</span>
+   <span class="c-bold">Agent-readiness</span>   <span class="c-dim"> 90</span>  <span class="c-dim">██████████████████</span><span class="c-dim">░░</span>
+
+   <span class="c-bold">Fix these first</span>
+  <span class="c-dim">1.</span> <span class="c-red"> FAIL</span> <span class="c-dim">[Agent]</span> <span class="c-bold">llms.txt published</span>
+      <span class="c-dim">No llms.txt at the repo root</span>
+  <span class="c-dim">2.</span> <span class="c-red"> WARN</span> <span class="c-dim">[Release]</span> <span class="c-bold">Tag matches package.json</span>
+      <span class="c-dim">package.json 0.3.0 vs release tag v0.1.0</span>
+
+<span class="c-dim">→ Full report: samples/launchgrade/report.html (report.json/md, badge.svg, fix-plan.md)</span></code></pre>
+  </div>
+  <div class="copy-row">
+    <code id="install-cmd" class="copy-src">npx -p github:fastpresspages/repograde repograde owner/repo</code>
+    <button class="btn small" data-copy="#install-cmd">Copy</button>
+  </div>
+  <p class="tiny"><code>-o report</code> writes <code>report.html</code>, <code>report.json</code>, <code>report.md</code>, <code>badge.svg</code> and <code>fix-plan.md</code>. Use a <code>GITHUB_TOKEN</code> for 5,000 requests/hour. An npm package is planned once publishing credentials exist; the GitHub install path above works today.</p>
+</section>
+
+<section id="sample" class="wrap section">
+  <h2>Real artifacts from real scans</h2>
+  <div class="art-grid">
+    <a class="art" href="samples/launchgrade/report.html"><b>report.html</b><span>standalone report you can attach anywhere</span></a>
+    <a class="art" href="samples/launchgrade/report.md"><b>report.md</b><span>drop straight into a README or PR</span></a>
+    <a class="art" href="samples/launchgrade/report.json"><b>report.json</b><span>machine-readable, CI-friendly output</span></a>
+    <a class="art" href="samples/launchgrade/badge.svg"><b>badge.svg</b><span>repograde badge for your README</span></a>
+    <a class="art" href="samples/launchgrade/fix-plan.md"><b>fix-plan.md</b><span>prioritized fixes with evidence</span></a>
+    <a class="art" href="samples/fastpress-start/report.html"><b>lower grade too</b><span>B 79 — we don't only show A+ scores</span></a>
+  </div>
+</section>
+
+<section id="faq" class="wrap section">
+  <h2>Questions people ask first</h2>
+  <details><summary>Is my repo private?</summary><p>RepoGrade only reads public GitHub metadata via the API: root file tree, README, package.json, releases. It cannot see private content and it never writes to your repo. Reports are generated locally and stay wherever you save them.</p></details>
+  <details><summary>What happens with repos without package.json?</summary><p>Package-specific checks (test script, engines, zero-deps, lockfile, tag match) cleanly skip and don't count against you. Any repo is gradeable.</p></details>
+  <details><summary>Can this run in CI?</summary><p>Yes — a composite GitHub Action ships in the repo, or call <code>npx -p github:fastpresspages/repograde repograde owner/repo --fail-under 80</code> in your workflow to gate releases on the score.</p></details>
+  <details><summary>Where do the weights come from?</summary><p>Engineering is heaviest (25%) because broken basics hurt adopters most; agent-readiness is 15% because that layer is invisible to humans and decisive for AI-helpers. Say <code>pull</code> in the repo if you'd like a different weighting proposal — the scoring is an honest heuristic, not a law.</p></details>
+  <details id="about"><summary>Who built this?</summary><p><a href="https://fastpresspages.github.io/YouLauncher/about.html">FastPress Labs</a> — small, free, open source tools for people who ship. LaunchGrade audits the landing page, RepoGrade audits the repository, and a free human review is always available when you want a person in the loop.</p></details>
+</section>
+
+<section id="contact" class="wrap section contact">
+  <h2>Free repo review (human actually reads it)</h2>
+  <p>Drop your repo and what you're stuck on. We run RepoGrade <em>and</em> read the code/findings manually, then reply with the three changes that matter most. No fee, no obligation, no drip campaign.</p>
+  <form class="lead-form" id="repo-review" action="https://formsubmit.co/meetcode99@gmail.com" method="POST" data-ajax="https://formsubmit.co/ajax/meetcode99@gmail.com">
+    <input type="hidden" name="request_type" value="Repo review request">
+    <input type="hidden" name="page" value="repograde-site">
+    <input type="hidden" name="_subject" value="RepoGrade site: repo review request">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="text" class="hp" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <label>Email
+      <input type="email" name="email" required autocomplete="email" placeholder="you@company.dev">
+    </label>
+    <label>Repo + what you need
+      <textarea name="message" rows="4" required minlength="10" placeholder="github.com/you/project — announce next Friday, not sure if docs hold up"></textarea>
+    </label>
+    <button type="submit">Request the free review</button>
+    <p class="form-note" role="status" aria-live="polite"></p>
+  </form>
+  <p class="tiny">Prefer plain mail? <a href="mailto:meetcode99@gmail.com?subject=Repo%20review%20request">meetcode99@gmail.com</a>. We reply to real messages from public repos only – send yours if the mailto is easier.</p>
+</section>
+</main>
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div>
+      <p class="brand-foot">▲ RepoGrade</p>
+      <p class="tiny">Part of <a href="https://github.com/fastpresspages">FastPress Labs</a> · open source under Apache-2.0 · no ads, no tracking, no fake metrics.</p>
+    </div>
+    <ul class="tiny">
+      <li><a href="https://github.com/fastpresspages/repograde">Source &amp; releases</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <ul class="tiny">
+      <li>LaunchGrade (CLI + MCP + skill)</li>
+      <li><a href="https://fastpresspages.github.io/YouLauncher/">Free launch partner</a></li>
+      <li><a href="https://fastpresspages.github.io/hire-me/">Hire page</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,349 @@
+{
+  "tool": "repograde",
+  "version": "0.1.0",
+  "generatedAt": "2026-10-24T15:30:13.847Z",
+  "repo": {
+    "owner": "fastpresspages",
+    "name": "launchgrade",
+    "url": "https://github.com/fastpresspages/launchgrade",
+    "branch": "main",
+    "description": "Grade your launch page before the internet does. 53 checks, 7 categories, zero dependencies. CLI + GitHub Action + MCP server."
+  },
+  "grade": "A+",
+  "score": 96,
+  "label": "Announce-ready",
+  "counts": {
+    "pass": 28,
+    "warn": 3,
+    "fail": 0,
+    "error": 0,
+    "skip": 0,
+    "info": 0
+  },
+  "categories": [
+    {
+      "key": "docs",
+      "label": "Documentation",
+      "weight": 20,
+      "score": 100,
+      "checks": 5,
+      "scored": 5
+    },
+    {
+      "key": "community",
+      "label": "Community",
+      "weight": 15,
+      "score": 100,
+      "checks": 7,
+      "scored": 7
+    },
+    {
+      "key": "engineering",
+      "label": "Engineering",
+      "weight": 25,
+      "score": 96,
+      "checks": 8,
+      "scored": 8
+    },
+    {
+      "key": "discoverability",
+      "label": "Discoverability",
+      "weight": 15,
+      "score": 100,
+      "checks": 4,
+      "scored": 4
+    },
+    {
+      "key": "release",
+      "label": "Release hygiene",
+      "weight": 10,
+      "score": 85,
+      "checks": 3,
+      "scored": 3
+    },
+    {
+      "key": "agent",
+      "label": "Agent-readiness",
+      "weight": 15,
+      "score": 90,
+      "checks": 4,
+      "scored": 4
+    }
+  ],
+  "topFixes": [
+    {
+      "id": "rel.version-match",
+      "title": "Tag matches package.json",
+      "category": "release",
+      "status": "warn",
+      "detail": "package.json 0.3.0 vs release tag v0.1.0",
+      "impact": 1.5
+    },
+    {
+      "id": "agent.llms",
+      "title": "llms.txt published",
+      "category": "agent",
+      "status": "warn",
+      "detail": "No llms.txt",
+      "impact": 1.5
+    },
+    {
+      "id": "eng.lockfile",
+      "title": "Dependencies pinned",
+      "category": "engineering",
+      "status": "warn",
+      "detail": "No lockfile: builds for this package.json will not be reproducible",
+      "impact": 0.926
+    }
+  ],
+  "checks": [
+    {
+      "id": "docs.readme",
+      "title": "README exists",
+      "category": "docs",
+      "weight": 4,
+      "status": "pass",
+      "detail": "README.md found"
+    },
+    {
+      "id": "docs.readme-quality",
+      "title": "README explains the repo",
+      "category": "docs",
+      "weight": 4,
+      "status": "pass",
+      "detail": "13853 characters of guidance"
+    },
+    {
+      "id": "docs.install",
+      "title": "Install command",
+      "category": "docs",
+      "weight": 4,
+      "status": "pass",
+      "detail": "Install guidance detected"
+    },
+    {
+      "id": "docs.usage",
+      "title": "Usage example",
+      "category": "docs",
+      "weight": 4,
+      "status": "pass",
+      "detail": "Usage section present"
+    },
+    {
+      "id": "docs.changelog",
+      "title": "Changelog with version entries",
+      "category": "docs",
+      "weight": 4,
+      "status": "pass",
+      "detail": "Versioned changelog entries"
+    },
+    {
+      "id": "comm.license",
+      "title": "License declared",
+      "category": "community",
+      "weight": 3,
+      "status": "pass",
+      "detail": "Apache-2.0"
+    },
+    {
+      "id": "comm.permissive",
+      "title": "Permissive license family",
+      "category": "community",
+      "weight": 2,
+      "status": "pass",
+      "detail": "Apache-2.0"
+    },
+    {
+      "id": "comm.contributing",
+      "title": "CONTRIBUTING guide",
+      "category": "community",
+      "weight": 2,
+      "status": "pass",
+      "detail": "Found CONTRIBUTING.md"
+    },
+    {
+      "id": "comm.code-of-conduct",
+      "title": "Code of Conduct",
+      "category": "community",
+      "weight": 2,
+      "status": "pass",
+      "detail": "Found"
+    },
+    {
+      "id": "comm.support",
+      "title": "Support channels",
+      "category": "community",
+      "weight": 2,
+      "status": "pass",
+      "detail": "SUPPORT.md present"
+    },
+    {
+      "id": "comm.issue-templates",
+      "title": "Issue templates",
+      "category": "community",
+      "weight": 2,
+      "status": "pass",
+      "detail": "4 template files"
+    },
+    {
+      "id": "comm.pr-template",
+      "title": "Pull Request template",
+      "category": "community",
+      "weight": 2,
+      "status": "pass",
+      "detail": "Found"
+    },
+    {
+      "id": "eng.tests",
+      "title": "Tests exist",
+      "category": "engineering",
+      "weight": 8,
+      "status": "pass",
+      "detail": "1 test file(s)"
+    },
+    {
+      "id": "eng.ci",
+      "title": "CI runs tests",
+      "category": "engineering",
+      "weight": 5,
+      "status": "pass",
+      "detail": "3 workflow(s)"
+    },
+    {
+      "id": "eng.test-script",
+      "title": "One-command tests",
+      "category": "engineering",
+      "weight": 3,
+      "status": "pass",
+      "detail": "`npm test` works in package.json"
+    },
+    {
+      "id": "eng.engines",
+      "title": "Toolchain declared",
+      "category": "engineering",
+      "weight": 2,
+      "status": "pass",
+      "detail": "node >=18.17"
+    },
+    {
+      "id": "eng.gitignore",
+      "title": ".gitignore present",
+      "category": "engineering",
+      "weight": 2,
+      "status": "pass",
+      "detail": "Found"
+    },
+    {
+      "id": "eng.zero-deps",
+      "title": "Zero runtime deps",
+      "category": "engineering",
+      "weight": 3,
+      "status": "pass",
+      "detail": "No runtime dependencies"
+    },
+    {
+      "id": "eng.lockfile",
+      "title": "Dependencies pinned",
+      "category": "engineering",
+      "weight": 2,
+      "status": "warn",
+      "detail": "No lockfile: builds for this package.json will not be reproducible"
+    },
+    {
+      "id": "eng.pkg-wellformed",
+      "title": "package.json basics complete",
+      "category": "engineering",
+      "weight": 2,
+      "status": "pass",
+      "detail": "name/version/description/license present"
+    },
+    {
+      "id": "disc.description",
+      "title": "Repo description",
+      "category": "discoverability",
+      "weight": 5,
+      "status": "pass",
+      "detail": "126 chars - long but searchable"
+    },
+    {
+      "id": "disc.topics",
+      "title": "At least 3 topics",
+      "category": "discoverability",
+      "weight": 3,
+      "status": "pass",
+      "detail": "10 topics"
+    },
+    {
+      "id": "disc.homepage",
+      "title": "Homepage link set",
+      "category": "discoverability",
+      "weight": 3,
+      "status": "pass",
+      "detail": "https://fastpresspages.github.io/launchgrade/"
+    },
+    {
+      "id": "disc.active",
+      "title": "Recent activity (<= 90 days)",
+      "category": "discoverability",
+      "weight": 4,
+      "status": "pass",
+      "detail": "last push 0 day(s) ago"
+    },
+    {
+      "id": "rel.releases",
+      "title": "At least one GitHub release",
+      "category": "release",
+      "weight": 4,
+      "status": "pass",
+      "detail": "1 release(s)"
+    },
+    {
+      "id": "rel.notes",
+      "title": "Release notes readable",
+      "category": "release",
+      "weight": 3,
+      "status": "pass",
+      "detail": "Notes explain what changed"
+    },
+    {
+      "id": "rel.version-match",
+      "title": "Tag matches package.json",
+      "category": "release",
+      "weight": 3,
+      "status": "warn",
+      "detail": "package.json 0.3.0 vs release tag v0.1.0"
+    },
+    {
+      "id": "agent.instructions",
+      "title": "AGENTS.md present",
+      "category": "agent",
+      "weight": 6,
+      "status": "pass",
+      "detail": "Found AGENTS.md"
+    },
+    {
+      "id": "agent.skills",
+      "title": "Installable agent skill",
+      "category": "agent",
+      "weight": 3,
+      "status": "pass",
+      "detail": "1 SKILL.md"
+    },
+    {
+      "id": "agent.mcp",
+      "title": "MCP or manifest released",
+      "category": "agent",
+      "weight": 3,
+      "status": "pass",
+      "detail": "2 MCP artifact(s)"
+    },
+    {
+      "id": "agent.llms",
+      "title": "llms.txt published",
+      "category": "agent",
+      "weight": 3,
+      "status": "warn",
+      "detail": "No llms.txt"
+    }
+  ]
+}

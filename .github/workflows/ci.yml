@@ -1,0 +1,50 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: "Tests (${{ matrix.os }} · Node ${{ matrix.node }})"
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        node: ['18', '20', '22']
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Node version
+        run: node --version
+      - name: Install (nothing should install)
+        run: node -e "const fs=require('fs');const p=JSON.parse(fs.readFileSync('package.json','utf8'));if(Object.keys(p.dependencies||{}).length)throw new Error('runtime dependencies crept in')"
+      - name: Run tests
+        run: node --test
+      - name: CLI smoke (--list)
+        run: node bin/repograde.js --list
+      - name: CLI help
+        run: node bin/repograde.js --help
+
+  dogfood:
+    name: "Self dogfood (repo grade)"
+    runs-on: ubuntu-latest
+    needs: [test]
+    if: github.event_name == 'push'
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+      - name: Grade this repo (public metadata only)
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node bin/repograde.js fastpresspages/repograde --quiet
+      - name: Gate at >= B+ (misses = ship anyway, but visible)
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node bin/repograde.js fastpresspages/repograde --fail-under 75 --quiet

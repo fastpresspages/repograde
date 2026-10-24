@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RepoGrade — fastpresspages/fastpress-start · B 79/100</title>
+<meta name="description" content="RepoGrade scan of fastpresspages/fastpress-start: grade B (79/100), Needs polish.">
+<meta property="og:title" content="RepoGrade: fastpresspages/fastpress-start = B 79/100">
+<meta property="og:description" content="Docs, community, engineering, discoverability, release hygiene and agent-readiness graded.">
+<style>
+:root{color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:#08080A;color:#EDEDEF;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:880px;margin:0 auto;padding:28px 20px 60px}
+h1{font-size:26px;margin:0 0 4px} .sub{color:#9CA3AF;font-size:14px}
+.card{background:#0D0D11;border:1px solid #1C1C24;border-radius:14px;padding:22px;margin-top:18px}
+.grade{display:flex;align-items:baseline;gap:14px} .grade b{font-size:52px;color:#C6FF4A} .grade span{color:#9CA3AF}
+.cat{margin-top:12px} .cat-head{display:flex;justify-content:space-between;font-size:14px}
+.bar{height:8px;border-radius:99px;background:#15151B;margin-top:4px;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:99px}
+ol{margin:0;padding-left:20px} li{margin:10px 0} li b{color:#EDEDEF}
+.tag{font-size:11px;padding:2px 8px;border-radius:99px;margin-right:6px}
+.tag.fail{background:#3A1414;color:#FF7A7A} .tag.warn{background:#3A2C14;color:#FFC24A}
+table{width:100%;border-collapse:collapse;font-size:13px} td{padding:10px 6px;border-bottom:1px solid #1C1C24;vertical-align:top}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:#A78BFA;font-size:12px}
+small{color:#9CA3AF} .foot{margin-top:26px;color:#9CA3AF} a{color:#C6FF4A}
+</style>
+</head>
+<body>
+<main>
+<h1>RepoGrade report</h1>
+<p class="sub">fastpresspages/fastpress-start · scanned 2026-10-24 · v0.1.0</p>
+<div class="card">
+  <div class="grade"><b>B</b><span>79/100 · Needs polish<br>19 pass · 10 warn · 2 fail · 0 n/a</span></div>
+  
+      <div class="cat">
+        <div class="cat-head"><span>Documentation</span><b>70</b></div>
+        <div class="bar"><i style="width:70%; background:#C6FF4A"></i></div>
+      </div>
+
+      <div class="cat">
+        <div class="cat-head"><span>Community</span><b>60</b></div>
+        <div class="bar"><i style="width:60%; background:#C6FF4A"></i></div>
+      </div>
+
+      <div class="cat">
+        <div class="cat-head"><span>Engineering</span><b>78</b></div>
+        <div class="bar"><i style="width:78%; background:#C6FF4A"></i></div>
+      </div>
+
+      <div class="cat">
+        <div class="cat-head"><span>Discoverability</span><b>100</b></div>
+        <div class="bar"><i style="width:100%; background:#C6FF4A"></i></div>
+      </div>
+
+      <div class="cat">
+        <div class="cat-head"><span>Release hygiene</span><b>100</b></div>
+        <div class="bar"><i style="width:100%; background:#C6FF4A"></i></div>
+      </div>
+
+      <div class="cat">
+        <div class="cat-head"><span>Agent-readiness</span><b>80</b></div>
+        <div class="bar"><i style="width:80%; background:#C6FF4A"></i></div>
+      </div>
+</div>
+<div class="card">
+  <h2 style="font-size:18px;margin-top:0">Fix these first</h2>
+  <ol>
+        <li><span class="tag fail">FAIL</span> <b>Changelog with version entries</b><br><small>No CHANGELOG.md — Create/open CHANGELOG.md and record the current release under a version heading.</small></li>
+        <li><span class="tag fail">FAIL</span> <b>CONTRIBUTING guide</b><br><small>No CONTRIBUTING.md (root or .github) — Add CONTRIBUTING.md describing setup, tests and PR norms.</small></li>
+        <li><span class="tag warn">WARN</span> <b>Tests exist</b><br><small>No test files detected — Add a first automated test.</small></li>
+        <li><span class="tag warn">WARN</span> <b>Usage example</b><br><small>No usage/quick-start section heading — Add a &quot;Usage&quot; section with the happy path, copy-pasteable.</small></li>
+        <li><span class="tag warn">WARN</span> <b>Installable agent skill</b><br><small>No skills/*/SKILL.md — Package an agent skill at skills/&lt;name&gt;/SKILL.md.</small></li>
+        <li><span class="tag warn">WARN</span> <b>MCP or manifest released</b><br><small>No MCP server/manifest detected — Expose an MCP server or a .well-known/mcp.json manifest.</small></li>
+        <li><span class="tag warn">WARN</span> <b>Code of Conduct</b><br><small>No Code of Conduct — Add CODE_OF_CONDUCT.md (Contributor Covenant works).</small></li></ol>
+</div>
+<div class="card">
+  <h2 style="font-size:18px;margin-top:0">All checks</h2>
+  <table><tr><td>✅</td><td><code>docs.readme</code><br><b>README exists</b><br><small>README.md found</small></td></tr><tr><td>✅</td><td><code>docs.readme-quality</code><br><b>README explains the repo</b><br><small>7073 characters of guidance</small></td></tr><tr><td>✅</td><td><code>docs.install</code><br><b>Install command</b><br><small>Install guidance detected</small></td></tr><tr><td>⚠️</td><td><code>docs.usage</code><br><b>Usage example</b><br><small>No usage/quick-start section heading</small></td></tr><tr><td>❌</td><td><code>docs.changelog</code><br><b>Changelog with version entries</b><br><small>No CHANGELOG.md</small></td></tr><tr><td>✅</td><td><code>comm.license</code><br><b>License declared</b><br><small>Apache-2.0</small></td></tr><tr><td>✅</td><td><code>comm.permissive</code><br><b>Permissive license family</b><br><small>Apache-2.0</small></td></tr><tr><td>❌</td><td><code>comm.contributing</code><br><b>CONTRIBUTING guide</b><br><small>No CONTRIBUTING.md (root or .github)</small></td></tr><tr><td>⚠️</td><td><code>comm.code-of-conduct</code><br><b>Code of Conduct</b><br><small>No Code of Conduct</small></td></tr><tr><td>⚠️</td><td><code>comm.support</code><br><b>Support channels</b><br><small>No SUPPORT.md</small></td></tr><tr><td>⚠️</td><td><code>comm.issue-templates</code><br><b>Issue templates</b><br><small>No .github/ISSUE_TEMPLATE</small></td></tr><tr><td>⚠️</td><td><code>comm.pr-template</code><br><b>Pull Request template</b><br><small>No PULL_REQUEST_TEMPLATE</small></td></tr><tr><td>⚠️</td><td><code>eng.tests</code><br><b>Tests exist</b><br><small>No test files detected</small></td></tr><tr><td>✅</td><td><code>eng.ci</code><br><b>CI runs tests</b><br><small>2 workflow(s)</small></td></tr><tr><td>✅</td><td><code>eng.test-script</code><br><b>One-command tests</b><br><small>`npm test` works in package.json</small></td></tr><tr><td>⚠️</td><td><code>eng.engines</code><br><b>Toolchain declared</b><br><small>package.json has no engines.node</small></td></tr><tr><td>✅</td><td><code>eng.gitignore</code><br><b>.gitignore present</b><br><small>Found</small></td></tr><tr><td>✅</td><td><code>eng.zero-deps</code><br><b>Zero runtime deps</b><br><small>No runtime dependencies</small></td></tr><tr><td>⚠️</td><td><code>eng.lockfile</code><br><b>Dependencies pinned</b><br><small>No lockfile: builds for this package.json will not be reproducible</small></td></tr><tr><td>✅</td><td><code>eng.pkg-wellformed</code><br><b>package.json basics complete</b><br><small>name/version/description/license present</small></td></tr><tr><td>✅</td><td><code>disc.description</code><br><b>Repo description</b><br><small>124 chars - long but searchable</small></td></tr><tr><td>✅</td><td><code>disc.topics</code><br><b>At least 3 topics</b><br><small>7 topics</small></td></tr><tr><td>✅</td><td><code>disc.homepage</code><br><b>Homepage link set</b><br><small>https://fastpresspages.github.io/fastpress-start/</small></td></tr><tr><td>✅</td><td><code>disc.active</code><br><b>Recent activity (&lt;= 90 days)</b><br><small>last push 0 day(s) ago</small></td></tr><tr><td>✅</td><td><code>rel.releases</code><br><b>At least one GitHub release</b><br><small>1 release(s)</small></td></tr><tr><td>✅</td><td><code>rel.notes</code><br><b>Release notes readable</b><br><small>Notes explain what changed</small></td></tr><tr><td>✅</td><td><code>rel.version-match</code><br><b>Tag matches package.json</b><br><small>1.0.0 == tag v1.0.0</small></td></tr><tr><td>✅</td><td><code>agent.instructions</code><br><b>AGENTS.md present</b><br><small>Found AGENTS.md</small></td></tr><tr><td>⚠️</td><td><code>agent.skills</code><br><b>Installable agent skill</b><br><small>No skills/*/SKILL.md</small></td></tr><tr><td>⚠️</td><td><code>agent.mcp</code><br><b>MCP or manifest released</b><br><small>No MCP server/manifest detected</small></td></tr><tr><td>✅</td><td><code>agent.llms</code><br><b>llms.txt published</b><br><small>Found llms.txt</small></td></tr></table>
+</div>
+<p class="foot">Scanned with <a href="https://github.com/fastpresspages/repograde">RepoGrade</a> (open source, zero dependencies). Report generated from public GitHub data; no repository contents were modified. <a href="https://github.com/fastpresspages/fastpress-start">View the repo</a>.</p>
+</main>
+</body>
+</html>

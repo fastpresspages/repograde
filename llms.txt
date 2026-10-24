@@ -1,0 +1,27 @@
+Repograde: agent summary
+========================
+
+WHAT: Zero-dependency CLI (Node >=18.17) that grades public GitHub repos
+before they are announced: 33 checks across docs, community, engineering,
+discoverability, release hygiene and agent-readiness.
+
+RUN: npx -p github:fastpresspages/repograde repograde owner/repo
+     Add -o report for report.html/json/md + badge.svg + fix-plan.md.
+
+CATEGORIES (weights): docs 20, community 15, engineering 25, discoverability 15,
+release 10, agent 15. Check ids look like docs.readme, eng.ci, agent.instructions.
+
+SCORING: pass=1 warn=0.5 fail=0, category normalized, overall weighted by
+category weights, letter grade A+..F. Skipped/info leave the pool.
+
+LIMITS: public metadata only; 60 req/h unauth, 5000/h with GITHUB_TOKEN;
+heuristic, not a security audit; never writes to the repo.
+
+ALSO SHIPS: MCP server (stdio, grade_repo/list_checks), GitHub Action, and an
+installable agent skill at skills/repograde/SKILL.md
+(npx skills add fastpresspages/repograde).
+
+SAMPLE: fastpresspages/launchgrade scored A+ 96/100 on 24 Oct 2026
+(samples/launchgrade/). fastpress-start scored B 79/100 the same day.
+
+LICENSE: Apache-2.0. No telemetry, no ads, no fake metrics.

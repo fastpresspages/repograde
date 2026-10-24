@@ -1,0 +1,21 @@
+{
+  "name": "repograde",
+  "description": "Grade any public GitHub repository before you announce it - 33 checks, 6 categories, zero dependencies. Also ships as a CLI and GitHub Action.",
+  "transport": "stdio",
+  "install": {
+    "command": "npx -p github:fastpresspages/repograde repograde-mcp",
+    "config": {
+      "mcpServers": {
+        "repograde": {
+          "command": "npx",
+          "args": ["-p", "github:fastpresspages/repograde", "repograde-mcp"]
+        }
+      }
+    }
+  },
+  "tools": ["grade_repo", "list_checks"],
+  "license": "Apache-2.0",
+  "homepage": "https://fastpresspages.github.io/repograde/",
+  "source": "https://github.com/fastpresspages/repograde",
+  "read_only": true
+}

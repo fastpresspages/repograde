@@ -1,0 +1,51 @@
+name: 'RepoGrade audit'
+description: 'Grade a public GitHub repository with RepoGrade and gate on the score'
+branding:
+  icon: 'award'
+  color: 'purple'
+inputs:
+  repo:
+    description: 'owner/repo to grade. Defaults to the repository running the workflow.'
+    required: false
+    default: ''
+  fail-under:
+    description: 'Fail the step when the score is under this number (use 0 to disable).'
+    required: false
+    default: '0'
+  out:
+    description: 'Directory to write report artifacts into (relative to workspace). Empty disables.'
+    required: false
+    default: ''
+  token:
+    description: 'GitHub token override. If empty, the step env GITHUB_TOKEN is used (set it to github.token in your workflow for 5,000 req/h).'
+    required: false
+    default: ''
+outputs:
+  score:
+    description: 'Final RepoGrade score (0-100)'
+    value: ${{ steps.scan.outputs.score }}
+  grade:
+    description: 'Letter grade (A+..F)'
+    value: ${{ steps.scan.outputs.grade }}
+runs:
+  using: 'composite'
+  steps:
+    - id: scan
+      shell: bash
+      run: |
+        REPO_INPUT="${{ inputs.repo }}"
+        if [ -z "$REPO_INPUT" ]; then REPO_INPUT="${GITHUB_REPOSITORY:-}"; fi
+        if [ -z "$REPO_INPUT" ]; then echo "repo input or GITHUB_REPOSITORY is required" && exit 1; fi
+        TMP="$(mktemp -d)"
+        ARGS=(--fail-under "${{ inputs.fail-under }}" --format json)
+        if [ -n "${{ inputs.out }}" ]; then ARGS+=(--out "${{ inputs.out }}"); fi
+        set +e
+        if [ -n "${{ inputs.token }}" ]; then
+          GITHUB_TOKEN="${{ inputs.token }}" node "${{ github.action_path }}/bin/repograde.js" "$REPO_INPUT" "${ARGS[@]}" > "$TMP/report.json"
+        else
+          node "${{ github.action_path }}/bin/repograde.js" "$REPO_INPUT" "${ARGS[@]}" > "$TMP/report.json"
+        fi
+        STATUS=$?
+        set -e
+        node -e 'const fs=require("fs");const r=JSON.parse(fs.readFileSync(process.argv[1],"utf8"));fs.appendFileSync(process.env.GITHUB_OUTPUT,`score=${r.score}\ngrade=${r.grade}\n`);console.log(`RepoGrade: ${r.grade} ${r.score}/100 for ${r.repo.owner}/${r.repo.name} — ${r.label}`);' "$TMP/report.json" || { echo "scan artifact missing"; exit 1; }
+        if [ $STATUS -ne 0 ]; then echo "RepoGrade gate failed (status $STATUS)."; exit $STATUS; fi

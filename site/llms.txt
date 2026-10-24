@@ -1,0 +1,31 @@
+RepoGrade: agent summary
+========================
+
+WHAT: RepoGrade is a free, zero-dependency CLI (and MCP server) that grades public
+GitHub repositories before they are announced. It reads public metadata only: the
+repo tree, README, CHANGELOG, package.json and release list via the GitHub API.
+
+RUN: npx -p github:fastpresspages/repograde repograde owner/repo
+     Add -o report to write report.html/json/md, badge.svg and fix-plan.md.
+
+CATEGORIES (weights): Documentation 20 · Community 15 · Engineering 25 ·
+Discoverability 15 · Release hygiene 10 · Agent-readiness 15.
+
+CHECKS (33): readme, readme-quality, install, usage, changelog; license,
+permissive, contributing, code-of-conduct, support, issue-templates, pr-template;
+tests, ci, test-script, engines, gitignore, zero-deps, lockfile, pkg-wellformed;
+description, topics, homepage, active; releases, notes, version-match;
+AGENTS.md, skills, mcp, llms.txt.
+
+SCORING: pass=1 warn=0.5 fail=0; category score normalized; overall weighted by
+category weights; letter grade A+ to F. Skipped and info checks leave the pool.
+
+LIMITS: reads public data only; rate-limited to 60 requests/hour unauthenticated
+(5,000 with GITHUB_TOKEN); heuristic, not a security audit; no repo is modified.
+
+ARTIFACTS: terminal, --json, --md, --html formats; -o dir writes 5 files.
+
+FREE HUMAN REVIEW: https://fastpresspages.github.io/repograde/#contact — a person
+reads your repo and replies. Never auto-submit that form.
+
+LICENSE: Apache-2.0. No ads, no tracking, no fake metrics.

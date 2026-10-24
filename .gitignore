@@ -1,0 +1,7 @@
+node_modules/
+reports/
+repograde-artifacts/
+.env
+.DS_Store
+Thumbs.db
+*.log
