@@ -1,7 +1,6 @@
-RepoGrade: agent summary
-========================
+# RepoGrade
 
-WHAT: RepoGrade is a free, zero-dependency CLI (and MCP server) that grades public
+RepoGrade is a free, zero-dependency CLI (and MCP server) that grades public
 GitHub repositories before they are announced. It reads public metadata only: the
 repo tree, README, CHANGELOG, package.json and release list via the GitHub API.
 

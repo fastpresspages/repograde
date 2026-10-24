@@ -1,0 +1,120 @@
+# LaunchGrade: fastpresspages.github.io
+
+> **A+ · 96/100 — Launch-ready**
+>
+> `https://fastpresspages.github.io/repograde/`  
+> Scanned Sat, 24 Oct 2026 15:40:24 GMT · 341 ms · 16 KB HTML
+
+**44 pass · 4 warn · 0 fail · 6 info**
+
+| Category | Score | Weight | Status |
+| --- | ---: | ---: | --- |
+| Conversion | 100/100 | 25% | 7✓ 0! 0× |
+| Trust | 94/100 | 15% | 4✓ 1! 0× |
+| Technical | 98/100 | 20% | 11✓ 1! 0× |
+| SEO | 91/100 | 15% | 8✓ 1! 0× |
+| Social sharing | 100/100 | 10% | 3✓ 0! 0× |
+| Accessibility | 100/100 | 5% | 6✓ 0! 0× |
+| AI-agent readiness | 86/100 | 10% | 5✓ 1! 0× |
+
+## Fix these first
+
+1. ⚠️ **Publishes llms.txt** (AI-agent readiness)
+   - llms.txt exists but does not look like the llms.txt format.
+   - **Fix:** Start with “# Your product”, one-line description, then links to key pages.
+2. ⚠️ **Has a meta description** (SEO)
+   - Description is 200 characters.
+   - **Fix:** Aim for 50–160 characters with the outcome and audience.
+3. ⚠️ **Shows a current footer** (Trust)
+   - No copyright/footer found.
+   - **Fix:** Add a footer with company name, year and legal links.
+4. ⚠️ **Measures visits** (Technical)
+   - No analytics detected.
+   - **Fix:** Add privacy-friendly analytics (Plausible, Umami, or a simple counter) before you announce.
+
+<details>
+<summary>All 54 checks</summary>
+
+### Conversion
+
+- ✅ **Has an email capture** — 1 form can capture an email (posts to https://formsubmit.co/meetcode99@gmail.com).
+- ✅ **Has a specific call to action** — Found a direct CTA: “B 79 for fastpress-start”.
+- ✅ **Shows social proof** — Social proof language found (“review”).
+- ✅ **Keeps signup friction low** — The lightest form asks for 2 fields.
+- ✅ **Offers a human contact path** — Direct email link found (meetcode99@gmail.com?subject=Repo%20review%20requ…).
+- ✅ **States a clear value proposition** — H1 is 7 words and a meta description explains the offer.
+- ✅ **Reverses the risk of clicking** — Risk-reversal language found (“free forever”).
+
+### Trust
+
+- ✅ **Links a privacy policy** — Privacy policy link found.
+- ✅ **Links terms of service** — Terms link found.
+- ✅ **Explains who is behind the page** — About/team link found (“FastPress Labs”).
+- ✅ **Links a real social profile** — Social profile linked (github.com).
+- ℹ️ **Publishes a security contact** — No /.well-known/security.txt (optional for launch pages).
+- ⚠️ **Shows a current footer** — No copyright/footer found.
+  - *Fix:* Add a footer with company name, year and legal links.
+
+### Technical
+
+- ✅ **Serves over HTTPS** — Final URL is HTTPS.
+- ✅ **Returns a healthy status** — Page returned HTTP 200.
+- ✅ **Loads the HTML quickly** — HTML arrived in 341 ms.
+- ✅ **Compresses the response** — Content-Encoding: gzip.
+- ✅ **Sets cache headers** — Cache-Control: max-age=600.
+- ✅ **Is mobile-ready** — Responsive viewport is configured.
+- ✅ **Allows search indexing** — No noindex directive found.
+- ✅ **Declares a canonical URL** — Canonical: https://fastpresspages.github.io/repograde/.
+- ✅ **Declares the page language** — html lang="en".
+- ✅ **Has a favicon** — Favicon linked (assets/favicon.svg).
+- ✅ **Avoids mixed content** — No insecure http:// assets found.
+- ⚠️ **Measures visits** — No analytics detected.
+  - *Fix:* Add privacy-friendly analytics (Plausible, Umami, or a simple counter) before you announce.
+- ℹ️ **Defines image dimensions** — No images to check.
+
+### SEO
+
+- ✅ **Has a well-sized title** — Title is 50 characters.
+- ⚠️ **Has a meta description** — Description is 200 characters.
+  - *Fix:* Aim for 50–160 characters with the outcome and audience.
+- ✅ **Has exactly one H1** — One H1: “Grade your repo before the internet does.”.
+- ✅ **Uses a sane heading outline** — 12 headings, 5 H2 sections.
+- ℹ️ **Describes its images** — No images to check.
+- ✅ **Publishes a sitemap** — sitemap.xml is valid XML.
+- ✅ **Publishes robots.txt** — robots.txt is published.
+- ✅ **Adds structured data** — JSON-LD found: Organization, WebSite, SoftwareApplication, FAQPage.
+- ✅ **Links its own pages** — 14 internal links found.
+- ✅ **Has readable copy in the HTML** — 31.9% of the HTML is readable text.
+
+### Social sharing
+
+- ✅ **Has a complete Open Graph card** — og:title, og:description, og:image and og:url are all set.
+- ✅ **Has a Twitter/X card** — twitter:card=summary_large_image with an image.
+- ✅ **Describes the share image** — og:image:alt is set.
+
+### Accessibility
+
+- ✅ **Labels its form fields** — 2/2 fields are labelled.
+- ✅ **Gives buttons accessible names** — 3 buttons have a name.
+- ✅ **Writes descriptive link text** — No vague link text found.
+- ✅ **Uses landmark elements** — main and nav landmarks are present.
+- ✅ **Allows pinch-zoom** — Zoom is not blocked.
+- ✅ **Offers a skip link** — Skip-to-content link found.
+
+### AI-agent readiness
+
+- ⚠️ **Publishes llms.txt** — llms.txt exists but does not look like the llms.txt format.
+  - *Fix:* Start with “# Your product”, one-line description, then links to key pages.
+- ℹ️ **Offers a full-context file** — No llms-full.txt (optional).
+- ✅ **Lets AI crawlers in** — All 6 major AI/search crawlers are allowed.
+- ✅ **Speaks to coding agents** — AGENTS.md is published.
+- ℹ️ **Serves markdown to agents** — No markdown alternate or content negotiation.
+- ℹ️ **Exposes a machine-readable API** — No MCP/OpenAPI descriptor (only needed if agents can act on your product).
+- ✅ **Answers buying questions** — FAQPage structured data is present.
+- ✅ **Uses semantic HTML** — Semantic main/article/nav structure found.
+- ✅ **Works without JavaScript** — 5131 characters of copy are in the HTML.
+
+</details>
+
+---
+Generated by [LaunchGrade](https://github.com/fastpresspages/launchgrade) — the open-source launch audit. Zero dependencies.
